@@ -1,0 +1,126 @@
+{
+  "categories": [
+    {
+      "category": "🎮 เครื่องมือเรียนเขียนโปรแกรม",
+      "items": [
+        {
+          "name": "Scratch",
+          "url": "https://scratch.mit.edu/",
+          "desc": "เขียนโปรแกรมด้วยบล็อก สร้างเกมและแอนิเมชัน",
+          "icon": "🐱"
+        },
+        {
+          "name": "Code.org",
+          "url": "https://code.org/",
+          "desc": "เรียนเขียนโปรแกรมฟรี ทุกระดับชั้น",
+          "icon": "💡"
+        },
+        {
+          "name": "Blockly Games",
+          "url": "https://blockly.games/",
+          "desc": "เกมสอนเขียนโปรแกรมด้วย Block",
+          "icon": "🧩"
+        },
+        {
+          "name": "Python Tutor",
+          "url": "https://pythontutor.com/",
+          "desc": "เรียนรู้ Python แบบเห็นภาพ",
+          "icon": "🐍"
+        },
+        {
+          "name": "Tinkercad",
+          "url": "https://www.tinkercad.com/",
+          "desc": "ออกแบบ 3D และจำลองวงจรไฟฟ้า",
+          "icon": "🔧"
+        },
+        {
+          "name": "MIT App Inventor",
+          "url": "https://appinventor.mit.edu/",
+          "desc": "สร้างแอป Android ด้วย Block",
+          "icon": "📱"
+        }
+      ]
+    },
+    {
+      "category": "📚 แหล่งเรียนรู้ออนไลน์",
+      "items": [
+        {
+          "name": "DLTV",
+          "url": "https://www.dltv.ac.th/",
+          "desc": "สื่อการสอนทางไกลผ่านดาวเทียม",
+          "icon": "📺"
+        },
+        {
+          "name": "OBEC Content Center",
+          "url": "https://contentcenter.obec.go.th/",
+          "desc": "ศูนย์เนื้อหา สพฐ.",
+          "icon": "🏫"
+        },
+        {
+          "name": "Thai MOOC",
+          "url": "https://thaimooc.org/",
+          "desc": "คอร์สเรียนออนไลน์ฟรีจากมหาวิทยาลัย",
+          "icon": "🎓"
+        },
+        {
+          "name": "Khan Academy",
+          "url": "https://th.khanacademy.org/",
+          "desc": "เรียนวิทย์ คณิต คอมพิวเตอร์ ฟรี",
+          "icon": "📖"
+        }
+      ]
+    },
+    {
+      "category": "🎨 เครื่องมือสร้างผลงาน",
+      "items": [
+        {
+          "name": "Canva",
+          "url": "https://www.canva.com/",
+          "desc": "ออกแบบกราฟิก โปสเตอร์ อินโฟกราฟิก",
+          "icon": "🖼️"
+        },
+        {
+          "name": "Google Docs",
+          "url": "https://docs.google.com/",
+          "desc": "สร้างเอกสาร นำเสนอ สเปรดชีต",
+          "icon": "📄"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/",
+          "desc": "ออกแบบ UX/UI เว็บไซต์และแอป",
+          "icon": "✏️"
+        },
+        {
+          "name": "Remove.bg",
+          "url": "https://www.remove.bg/",
+          "desc": "ลบพื้นหลังรูปภาพอัตโนมัติ",
+          "icon": "🖌️"
+        }
+      ]
+    },
+    {
+      "category": "🌐 เว็บไซต์หน่วยงาน",
+      "items": [
+        {
+          "name": "สพฐ.",
+          "url": "https://www.obec.go.th/",
+          "desc": "สำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน",
+          "icon": "🏛️"
+        },
+        {
+          "name": "กระทรวงศึกษาธิการ",
+          "url": "https://www.moe.go.th/",
+          "desc": "กระทรวงศึกษาธิการ",
+          "icon": "🇹🇭"
+        },
+        {
+          "name": "สทศ.",
+          "url": "https://www.niets.or.th/",
+          "desc": "สถาบันทดสอบทางการศึกษาแห่งชาติ",
+          "icon": "📊"
+        }
+      ]
+    }
+  ]
+}

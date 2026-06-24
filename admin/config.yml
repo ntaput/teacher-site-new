@@ -1,0 +1,168 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (master or main)
+
+local_backend: true
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "⚙️ ตั้งค่าทั่วไป (ครู & ตารางสอน)"
+    files:
+      - label: "👨‍🏫 ข้อมูลส่วนตัวครู"
+        name: "teacher"
+        file: "data/teacher.json"
+        description: "ข้อมูลส่วนตัว ปรัชญาการสอน และการติดต่อ"
+        fields:
+          - {label: "ชื่อ-นามสกุล", name: "name", widget: "string"}
+          - {label: "ตำแหน่ง", name: "position", widget: "string"}
+          - {label: "โรงเรียน", name: "school", widget: "string"}
+          - {label: "ประเภทโรงเรียน", name: "schoolType", widget: "string"}
+          - {label: "จังหวัด", name: "province", widget: "string"}
+          - {label: "ครูที่ปรึกษา", name: "advisory", widget: "string"}
+          - {label: "วุฒิการศึกษา", name: "education", widget: "string"}
+          - {label: "ภาคเรียนปัจจุบัน", name: "semester", widget: "string"}
+          - {label: "อีเมล", name: "email", widget: "string"}
+          - {label: "ลิงก์ Facebook", name: "facebook", widget: "string"}
+          - {label: "Line ID", name: "line", widget: "string"}
+          - {label: "ปรัชญาการสอน", name: "philosophy", widget: "text"}
+
+      - label: "📅 ตารางสอนประจำสัปดาห์"
+        name: "schedule"
+        file: "data/schedule.json"
+        fields:
+          - {label: "ภาคเรียน", name: "semester", widget: "string"}
+          - label: "คาบเรียนและเวลา"
+            name: "periods"
+            widget: "list"
+            fields:
+              - {label: "คาบที่ (ตัวเลข หรือ 'พัก')", name: "num", widget: "string"}
+              - {label: "เวลา", name: "time", widget: "string"}
+          - label: "ตารางแต่ละวัน"
+            name: "timetable"
+            widget: "object"
+            fields:
+              - label: "วันจันทร์"
+                name: "จันทร์"
+                widget: "list"
+                fields:
+                  - {label: "วิชา", name: "subject", widget: "string", required: false}
+                  - {label: "ชั้น", name: "class", widget: "string", required: false}
+                  - {label: "ห้อง", name: "room", widget: "string", required: false}
+              - label: "วันอังคาร"
+                name: "อังคาร"
+                widget: "list"
+                fields:
+                  - {label: "วิชา", name: "subject", widget: "string", required: false}
+                  - {label: "ชั้น", name: "class", widget: "string", required: false}
+                  - {label: "ห้อง", name: "room", widget: "string", required: false}
+              - label: "วันพุธ"
+                name: "พุธ"
+                widget: "list"
+                fields:
+                  - {label: "วิชา", name: "subject", widget: "string", required: false}
+                  - {label: "ชั้น", name: "class", widget: "string", required: false}
+                  - {label: "ห้อง", name: "room", widget: "string", required: false}
+              - label: "วันพฤหัสบดี"
+                name: "พฤหัสบดี"
+                widget: "list"
+                fields:
+                  - {label: "วิชา", name: "subject", widget: "string", required: false}
+                  - {label: "ชั้น", name: "class", widget: "string", required: false}
+                  - {label: "ห้อง", name: "room", widget: "string", required: false}
+              - label: "วันศุกร์"
+                name: "ศุกร์"
+                widget: "list"
+                fields:
+                  - {label: "วิชา", name: "subject", widget: "string", required: false}
+                  - {label: "ชั้น", name: "class", widget: "string", required: false}
+                  - {label: "ห้อง", name: "room", widget: "string", required: false}
+
+  - name: "database"
+    label: "📚 ฐานข้อมูล (วิชา, สื่อ, ข่าว)"
+    files:
+      - label: "📖 รายวิชาที่สอน"
+        name: "subjects"
+        file: "data/subjects.json"
+        fields:
+          - label: "รายชื่อวิชาทั้งหมด"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "รหัสอ้างอิง (ห้ามซ้ำ เช่น cs-m1)", name: "id", widget: "string"}
+              - {label: "ชื่อวิชา", name: "name", widget: "string"}
+              - {label: "ระดับชั้น", name: "level", widget: "string"}
+              - {label: "กลุ่มหมวดหมู่ (computing/design/computer)", name: "group", widget: "select", options: ["computing", "design", "computer"]}
+              - {label: "ชื่อกลุ่มหมวดหมู่ (ภาษาไทย)", name: "groupName", widget: "string"}
+              - {label: "ไอคอน (Emoji)", name: "icon", widget: "string"}
+              - {label: "คำอธิบายวิชา", name: "description", widget: "text"}
+              - label: "หัวข้อที่สอน"
+                name: "topics"
+                widget: "list"
+                field: {label: "ชื่อหัวข้อ", name: "topic", widget: "string"}
+
+      - label: "📦 สื่อการสอน"
+        name: "materials"
+        file: "data/materials.json"
+        fields:
+          - label: "สื่อการสอนทั้งหมด"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "รหัสอ้างอิงสื่อ (ตัวเลข ห้ามซ้ำ)", name: "id", widget: "number", value_type: "int"}
+              - {label: "ชื่อสื่อ", name: "title", widget: "string"}
+              - {label: "ประเภท (video/pdf/quiz/slides/worksheet/game)", name: "type", widget: "select", options: ["video", "pdf", "quiz", "slides", "worksheet", "game"]}
+              - {label: "ชื่อประเภทภาษาไทย (เช่น 🎬 วิดีโอ)", name: "typeLabel", widget: "string"}
+              - {label: "วิชา (รหัสอ้างอิงของวิชา เช่น cs-m1)", name: "subject", widget: "string"}
+              - {label: "ระดับชั้น (เช่น ม.1)", name: "level", widget: "string"}
+              - {label: "ลิงก์สื่อ (URL)", name: "url", widget: "string"}
+              - {label: "คำอธิบายสื่อสั้นๆ", name: "description", widget: "string"}
+
+      - label: "📰 ข่าวประชาสัมพันธ์"
+        name: "news"
+        file: "data/news.json"
+        fields:
+          - label: "ข่าวสารทั้งหมด"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "วันที่ (ตัวเลข)", name: "date", widget: "string"}
+              - {label: "เดือน (เช่น มิ.ย.)", name: "month", widget: "string"}
+              - {label: "ปี (เช่น 2569)", name: "year", widget: "string"}
+              - {label: "หัวข้อข่าว", name: "title", widget: "string"}
+              - {label: "รายละเอียดข่าว", name: "content", widget: "text"}
+
+      - label: "🔗 ลิงก์ที่มีประโยชน์"
+        name: "links"
+        file: "data/links.json"
+        fields:
+          - label: "หมวดหมู่ลิงก์"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "ชื่อหมวดหมู่ (พร้อม Emoji)", name: "category", widget: "string"}
+              - label: "ลิงก์ในหมวดหมู่นี้"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "ชื่อเว็บ", name: "name", widget: "string"}
+                  - {label: "ลิงก์ (URL)", name: "url", widget: "string"}
+                  - {label: "คำอธิบาย", name: "desc", widget: "string"}
+                  - {label: "ไอคอน (Emoji)", name: "icon", widget: "string"}
+
+      - label: "🖼️ แกลเลอรี่ผลงาน"
+        name: "gallery"
+        file: "data/gallery.json"
+        fields:
+          - label: "ผลงานทั้งหมด"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "รหัสอ้างอิงผลงาน (ตัวเลข)", name: "id", widget: "number", value_type: "int"}
+              - {label: "ชื่อผลงาน/กิจกรรม", name: "title", widget: "string"}
+              - {label: "หมวดหมู่ (กิจกรรม/ผลงาน)", name: "category", widget: "string"}
+              - {label: "รูปภาพ Placeholder (Emoji แทนรูปชั่วคราว)", name: "placeholder", widget: "string"}
+              # ถ้าต้องการใส่รูปลบ # ด้านล่างออก
+              # - {label: "รูปภาพ (ถ้ามี)", name: "image", widget: "image", required: false}

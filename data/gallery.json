@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "กิจกรรม Coding Workshop",
+      "category": "กิจกรรม",
+      "placeholder": "🖥️"
+    },
+    {
+      "id": 2,
+      "title": "ผลงาน Scratch ม.1",
+      "category": "ผลงาน",
+      "placeholder": "🐱"
+    },
+    {
+      "id": 3,
+      "title": "โปรเจค IoT ม.3",
+      "category": "ผลงาน",
+      "placeholder": "🔌"
+    },
+    {
+      "id": 4,
+      "title": "การแข่งขันหุ่นยนต์",
+      "category": "กิจกรรม",
+      "placeholder": "🤖"
+    },
+    {
+      "id": 5,
+      "title": "ผลงานออกแบบ ม.2",
+      "category": "ผลงาน",
+      "placeholder": "🎨"
+    },
+    {
+      "id": 6,
+      "title": "กิจกรรมวันวิทยาศาสตร์",
+      "category": "กิจกรรม",
+      "placeholder": "🔬"
+    },
+    {
+      "id": 7,
+      "title": "โปรเจคเว็บไซต์ ม.6",
+      "category": "ผลงาน",
+      "placeholder": "🌐"
+    },
+    {
+      "id": 8,
+      "title": "อบรม Digital Literacy",
+      "category": "กิจกรรม",
+      "placeholder": "📱"
+    }
+  ]
+}

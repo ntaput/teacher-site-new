@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ครูคอม เทคโนโลยี | ครูขวัญชัย มั่นชาติ — โรงเรียนศรีสุตาวิทยา</title>
+  <meta name="description" content="เว็บไซต์สื่อการสอนวิชาเทคโนโลยี วิทยาการคำนวณ การออกแบบและเทคโนโลยี โดยครูขวัญชัย มั่นชาติ โรงเรียนศรีสุตาวิทยา จ.อุบลราชธานี">
+  <meta name="keywords" content="เทคโนโลยี, วิทยาการคำนวณ, การออกแบบและเทคโนโลยี, ครูขวัญชัย, โรงเรียนศรีสุตาวิทยา">
+  <meta name="author" content="ครูขวัญชัย มั่นชาติ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">💻</div>
+        <span>ครูคอม เทคโนโลยี</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับครู</a>
+        <a href="subjects.html">รายวิชา</a>
+        <a href="materials.html">สื่อการสอน</a>
+        <a href="schedule.html">ตารางสอน</a>
+        <a href="gallery.html">ผลงาน</a>
+        <a href="links.html">ลิงก์</a>
+        <a href="contact.html">ติดต่อ</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas class="hero-canvas" id="hero-particles"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">ภาคเรียนที่ 1/2569 • โรงเรียนศรีสุตาวิทยา</div>
+      <h1>ยินดีต้อนรับสู่<span class="highlight">ห้องเรียนเทคโนโลยี</span></h1>
+      <p class="hero-subtitle">ครูขวัญชัย มั่นชาติ • ครูผู้สอนวิชาเทคโนโลยี โรงเรียนพระปริยัติธรรม ศรีสุตาวิทยา จ.อุบลราชธานี</p>
+      <div class="hero-buttons">
+        <a href="subjects.html" class="btn btn-primary">📚 รายวิชาที่สอน</a>
+        <a href="materials.html" class="btn btn-outline">📦 สื่อการสอน</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-number">15</span>
+          <span class="hero-stat-label">รายวิชา</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">ม.1-ม.6</span>
+          <span class="hero-stat-label">ระดับชั้น</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">เทอม 1/2569</span>
+          <span class="hero-stat-label">ภาคเรียน</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Subject Cards Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>รายวิชาที่สอน</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div id="home-subjects" class="grid-3 stagger-children">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>ข่าวประชาสัมพันธ์</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div id="news-list" class="container-narrow">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">💻</div>
+            <span>ครูคอม เทคโนโลยี</span>
+          </div>
+          <p>เว็บไซต์สื่อการสอนวิชาเทคโนโลยี โรงเรียนศรีสุตาวิทยา<br>โรงเรียนพระปริยัติธรรม จ.อุบลราชธานี</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">📘</a>
+            <a href="mailto:khwanchai@example.com" aria-label="Email">✉️</a>
+            <a href="#" aria-label="Line">💬</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>เมนูหลัก</h4>
+          <a href="index.html">หน้าแรก</a>
+          <a href="about.html">เกี่ยวกับครู</a>
+          <a href="subjects.html">รายวิชาที่สอน</a>
+          <a href="materials.html">สื่อการสอน</a>
+        </div>
+        <div class="footer-column">
+          <h4>เพิ่มเติม</h4>
+          <a href="schedule.html">ตารางสอน</a>
+          <a href="gallery.html">ผลงานนักเรียน</a>
+          <a href="links.html">ลิงก์ที่มีประโยชน์</a>
+          <a href="contact.html">ติดต่อครู</a>
+        </div>
+        <div class="footer-column">
+          <h4>ลิงก์ภายนอก</h4>
+          <a href="https://scratch.mit.edu/" target="_blank">Scratch</a>
+          <a href="https://code.org/" target="_blank">Code.org</a>
+          <a href="https://www.dltv.ac.th/" target="_blank">DLTV</a>
+          <a href="https://www.canva.com/" target="_blank">Canva</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2569 ครูขวัญชัย มั่นชาติ — โรงเรียนศรีสุตาวิทยา</span>
+        <span>สร้างด้วย ❤️ เพื่อการศึกษา</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

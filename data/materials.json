@@ -1,0 +1,246 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "แนวคิดเชิงคำนวณ — Computational Thinking",
+      "type": "video",
+      "typeLabel": "🎬 วิดีโอ",
+      "subject": "cs-m1",
+      "level": "ม.1",
+      "group": "computing",
+      "url": "https://www.youtube.com/",
+      "description": "วิดีโอสอนแนวคิดเชิงคำนวณสำหรับ ม.1"
+    },
+    {
+      "id": 2,
+      "title": "ใบงาน: ฝึกเขียน Algorithm ด้วยผังงาน",
+      "type": "worksheet",
+      "typeLabel": "📋 ใบงาน",
+      "subject": "cs-m1",
+      "level": "ม.1",
+      "group": "computing",
+      "url": "#",
+      "description": "ใบงานฝึกเขียนอัลกอริทึมด้วยผังงาน (Flowchart)"
+    },
+    {
+      "id": 3,
+      "title": "Scratch: เริ่มต้นเขียนโปรแกรม",
+      "type": "game",
+      "typeLabel": "🎮 โปรแกรม",
+      "subject": "cs-m1",
+      "level": "ม.1",
+      "group": "computing",
+      "url": "https://scratch.mit.edu/",
+      "description": "เริ่มเขียนโปรแกรมด้วย Scratch — สร้างเกมและแอนิเมชัน"
+    },
+    {
+      "id": 4,
+      "title": "สไลด์: พื้นฐานแนวคิดเชิงคำนวณ ม.1",
+      "type": "slides",
+      "typeLabel": "📊 สไลด์",
+      "subject": "cs-m1",
+      "level": "ม.1",
+      "group": "computing",
+      "url": "#",
+      "description": "สไลด์ประกอบการสอนแนวคิดเชิงคำนวณ"
+    },
+    {
+      "id": 5,
+      "title": "อัลกอริทึมและการเขียนโปรแกรม",
+      "type": "video",
+      "typeLabel": "🎬 วิดีโอ",
+      "subject": "cs-m2",
+      "level": "ม.2",
+      "group": "computing",
+      "url": "https://www.youtube.com/",
+      "description": "วิดีโอสอนอัลกอริทึมสำหรับ ม.2"
+    },
+    {
+      "id": 6,
+      "title": "แบบทดสอบ: อัลกอริทึม ม.2",
+      "type": "quiz",
+      "typeLabel": "📝 แบบทดสอบ",
+      "subject": "cs-m2",
+      "level": "ม.2",
+      "group": "computing",
+      "url": "#",
+      "description": "แบบทดสอบออนไลน์เรื่องอัลกอริทึม"
+    },
+    {
+      "id": 7,
+      "title": "Python เบื้องต้น — ตัวแปรและประเภทข้อมูล",
+      "type": "slides",
+      "typeLabel": "📊 สไลด์",
+      "subject": "cs-m2",
+      "level": "ม.2",
+      "group": "computing",
+      "url": "#",
+      "description": "สไลด์สอน Python เบื้องต้น"
+    },
+    {
+      "id": 8,
+      "title": "IoT — อินเทอร์เน็ตของสรรพสิ่ง",
+      "type": "video",
+      "typeLabel": "🎬 วิดีโอ",
+      "subject": "cs-m3",
+      "level": "ม.3",
+      "group": "computing",
+      "url": "https://www.youtube.com/",
+      "description": "วิดีโอสอน IoT สำหรับ ม.3"
+    },
+    {
+      "id": 9,
+      "title": "เอกสารประกอบ: Python Programming",
+      "type": "pdf",
+      "typeLabel": "📄 เอกสาร",
+      "subject": "cs-m3",
+      "level": "ม.3",
+      "group": "computing",
+      "url": "#",
+      "description": "เอกสารประกอบการสอน Python สำหรับ ม.3"
+    },
+    {
+      "id": 10,
+      "title": "แนวคิดเชิงคำนวณขั้นสูง",
+      "type": "slides",
+      "typeLabel": "📊 สไลด์",
+      "subject": "cs-m4",
+      "level": "ม.4",
+      "group": "computing",
+      "url": "#",
+      "description": "สไลด์สอนแนวคิดเชิงคำนวณขั้นสูง"
+    },
+    {
+      "id": 11,
+      "title": "ใบงาน: โครงสร้างข้อมูล Python",
+      "type": "worksheet",
+      "typeLabel": "📋 ใบงาน",
+      "subject": "cs-m4",
+      "level": "ม.4",
+      "group": "computing",
+      "url": "#",
+      "description": "ใบงานฝึกโครงสร้างข้อมูล List, Tuple, Dictionary"
+    },
+    {
+      "id": 12,
+      "title": "Data Science เบื้องต้น",
+      "type": "video",
+      "typeLabel": "🎬 วิดีโอ",
+      "subject": "cs-m5",
+      "level": "ม.5",
+      "group": "computing",
+      "url": "https://www.youtube.com/",
+      "description": "วิดีโอสอนวิทยาการข้อมูลเบื้องต้น"
+    },
+    {
+      "id": 13,
+      "title": "แบบทดสอบ: Data Science ม.5",
+      "type": "quiz",
+      "typeLabel": "📝 แบบทดสอบ",
+      "subject": "cs-m5",
+      "level": "ม.5",
+      "group": "computing",
+      "url": "#",
+      "description": "แบบทดสอบออนไลน์เรื่อง Data Science"
+    },
+    {
+      "id": 14,
+      "title": "พัฒนาเว็บไซต์ด้วย HTML & CSS",
+      "type": "video",
+      "typeLabel": "🎬 วิดีโอ",
+      "subject": "cs-m6",
+      "level": "ม.6",
+      "group": "computing",
+      "url": "https://www.youtube.com/",
+      "description": "วิดีโอสอนสร้างเว็บไซต์สำหรับ ม.6"
+    },
+    {
+      "id": 15,
+      "title": "ใบงาน: ออกแบบ UX/UI",
+      "type": "worksheet",
+      "typeLabel": "📋 ใบงาน",
+      "subject": "cs-m6",
+      "level": "ม.6",
+      "group": "computing",
+      "url": "#",
+      "description": "ใบงานฝึกออกแบบ UX/UI ด้วย Figma"
+    },
+    {
+      "id": 16,
+      "title": "กระบวนการออกแบบเชิงวิศวกรรม",
+      "type": "slides",
+      "typeLabel": "📊 สไลด์",
+      "subject": "dt-m1",
+      "level": "ม.1",
+      "group": "design",
+      "url": "#",
+      "description": "สไลด์สอนกระบวนการออกแบบเชิงวิศวกรรม"
+    },
+    {
+      "id": 17,
+      "title": "ใบกิจกรรม: ออกแบบผลิตภัณฑ์ง่ายๆ",
+      "type": "worksheet",
+      "typeLabel": "📋 ใบกิจกรรม",
+      "subject": "dt-m1",
+      "level": "ม.1",
+      "group": "design",
+      "url": "#",
+      "description": "ใบกิจกรรมออกแบบผลิตภัณฑ์ตามกระบวนการ"
+    },
+    {
+      "id": 18,
+      "title": "วัสดุและสมบัติของวัสดุ",
+      "type": "video",
+      "typeLabel": "🎬 วิดีโอ",
+      "subject": "dt-m2",
+      "level": "ม.2",
+      "group": "design",
+      "url": "https://www.youtube.com/",
+      "description": "วิดีโอสอนเรื่องวัสดุและสมบัติ"
+    },
+    {
+      "id": 19,
+      "title": "ระบบทางเทคโนโลยี",
+      "type": "slides",
+      "typeLabel": "📊 สไลด์",
+      "subject": "dt-m3",
+      "level": "ม.3",
+      "group": "design",
+      "url": "#",
+      "description": "สไลด์สอนระบบทางเทคโนโลยี"
+    },
+    {
+      "id": 20,
+      "title": "Code.org — เรียนเขียนโปรแกรม",
+      "type": "game",
+      "typeLabel": "🎮 โปรแกรม",
+      "subject": "comp-1",
+      "level": "เพิ่มเติม",
+      "group": "computer",
+      "url": "https://code.org/",
+      "description": "เรียนเขียนโปรแกรมฟรีบน Code.org"
+    },
+    {
+      "id": 21,
+      "title": "ใบงาน: การใช้ Google Docs",
+      "type": "worksheet",
+      "typeLabel": "📋 ใบงาน",
+      "subject": "comp-1",
+      "level": "เพิ่มเติม",
+      "group": "computer",
+      "url": "#",
+      "description": "ใบงานฝึกใช้ Google Docs"
+    },
+    {
+      "id": 22,
+      "title": "Canva — ออกแบบกราฟิก",
+      "type": "game",
+      "typeLabel": "🎮 โปรแกรม",
+      "subject": "comp-2",
+      "level": "เพิ่มเติม",
+      "group": "computer",
+      "url": "https://www.canva.com/",
+      "description": "ออกแบบกราฟิกง่ายๆ ด้วย Canva"
+    }
+  ]
+}
