@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "label": "หน้าแรก", "url": "index.html" },
+    { "label": "เกี่ยวกับครู", "url": "about.html" },
+    { "label": "รายวิชา", "url": "subjects.html" },
+    { "label": "สื่อการสอน", "url": "materials.html" },
+    { "label": "ตารางสอน", "url": "schedule.html" },
+    { "label": "ผลงาน", "url": "gallery.html" },
+    { "label": "ลิงก์", "url": "links.html" },
+    { "label": "ติดต่อ", "url": "contact.html" }
+  ]
+}

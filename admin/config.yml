@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   branch: main # Branch to update (master or main)
 
-local_backend: true
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
@@ -11,6 +10,18 @@ collections:
   - name: "settings"
     label: "⚙️ ตั้งค่าทั่วไป (ครู & ตารางสอน)"
     files:
+      - label: "🧭 เมนูนำทาง (Navigation)"
+        name: "menu"
+        file: "data/menu.json"
+        description: "ปรับแต่งเมนูบาร์ด้านบนของเว็บไซต์"
+        fields:
+          - label: "รายการเมนู"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "ชื่อเมนู", name: "label", widget: "string"}
+              - {label: "ลิงก์ (เช่น about.html หรือ https://...)", name: "url", widget: "string"}
+
       - label: "👨‍🏫 ข้อมูลส่วนตัวครู"
         name: "teacher"
         file: "data/teacher.json"

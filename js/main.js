@@ -8,11 +8,11 @@ let SITE_DATA = {};
 
 document.addEventListener('DOMContentLoaded', async () => {
   initTheme();
-  initNavigation();
   initScrollEffects();
   initBackToTop();
   
   await loadAllData();
+  initNavigation();
   
   // Page-specific init
   if (document.getElementById('subjects-content')) initSubjects();
@@ -27,14 +27,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadAllData() {
   try {
-    const [teacher, subjects, materials, schedule, links, news, gallery] = await Promise.all([
+    const [teacher, subjects, materials, schedule, links, news, gallery, menu] = await Promise.all([
       fetch('data/teacher.json').then(r => r.json()),
       fetch('data/subjects.json').then(r => r.json()),
       fetch('data/materials.json').then(r => r.json()),
       fetch('data/schedule.json').then(r => r.json()),
       fetch('data/links.json').then(r => r.json()),
       fetch('data/news.json').then(r => r.json()),
-      fetch('data/gallery.json').then(r => r.json())
+      fetch('data/gallery.json').then(r => r.json()),
+      fetch('data/menu.json').then(r => r.json())
     ]);
     
     SITE_DATA = {
@@ -44,7 +45,8 @@ async function loadAllData() {
       schedule: schedule || {},
       links: links ? links.categories : [],
       news: news ? news.items : [],
-      gallery: gallery ? gallery.items : []
+      gallery: gallery ? gallery.items : [],
+      menu: menu ? menu.items : []
     };
   } catch (err) {
     console.error("Error loading data from JSON:", err);
@@ -72,6 +74,17 @@ function initNavigation() {
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');
   
+  // Render dynamic menu
+  if (navLinks && SITE_DATA.menu) {
+    navLinks.innerHTML = '';
+    SITE_DATA.menu.forEach(item => {
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.label;
+      navLinks.appendChild(a);
+    });
+  }
+
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
       mobileToggle.classList.toggle('active');
