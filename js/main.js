@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initBackToTop();
   
   await loadAllData();
+  initSiteName();
   initNavigation();
   initHome();
   
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadAllData() {
   try {
-    const [teacher, subjects, materials, schedule, links, news, gallery, menu, home] = await Promise.all([
+    const [site, teacher, subjects, materials, schedule, links, news, gallery, menu, home] = await Promise.all([
+      fetch('data/site.json').then(r => r.json()),
       fetch('data/teacher.json').then(r => r.json()),
       fetch('data/subjects.json').then(r => r.json()),
       fetch('data/materials.json').then(r => r.json()),
@@ -41,6 +43,7 @@ async function loadAllData() {
     ]);
     
     SITE_DATA = {
+      site: site || {},
       teacher: teacher || {},
       subjects: subjects ? subjects.items : [],
       materials: materials ? materials.items : [],
@@ -54,6 +57,23 @@ async function loadAllData() {
   } catch (err) {
     console.error("Error loading data from JSON:", err);
   }
+}
+
+// ============ Global Site Name ============
+function initSiteName() {
+  if (!SITE_DATA.site || !SITE_DATA.site.siteName) return;
+  const name = SITE_DATA.site.siteName;
+  
+  // Update Navbar Logo
+  const navLogo = document.getElementById('nav-logo-text');
+  if (navLogo) navLogo.textContent = name;
+  
+  // Update Footer Logo
+  const footerLogo = document.getElementById('footer-logo-text');
+  if (footerLogo) footerLogo.textContent = name;
+  
+  // Update Document Title (replace only the "ครูคอม เทคโนโลยี" part)
+  document.title = document.title.replace('ครูคอม เทคโนโลยี', name);
 }
 
 // ============ Home Page ============

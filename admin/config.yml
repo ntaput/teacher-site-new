@@ -10,6 +10,13 @@ collections:
   - name: "settings"
     label: "⚙️ ตั้งค่าทั่วไป (ครู & ตารางสอน)"
     files:
+      - label: "🌐 ตั้งค่าชื่อเว็บไซต์ (Site Settings)"
+        name: "site"
+        file: "data/site.json"
+        description: "แก้ไขชื่อโลโก้และแท็บของเว็บไซต์"
+        fields:
+          - {label: "ชื่อเว็บไซต์", name: "siteName", widget: "string"}
+
       - label: "🏠 ตั้งค่าหน้าแรก (Homepage)"
         name: "home"
         file: "data/home.json"
