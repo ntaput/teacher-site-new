@@ -10,6 +10,24 @@ collections:
   - name: "settings"
     label: "⚙️ ตั้งค่าทั่วไป (ครู & ตารางสอน)"
     files:
+      - label: "🏠 ตั้งค่าหน้าแรก (Homepage)"
+        name: "home"
+        file: "data/home.json"
+        description: "แก้ไขข้อความและสถิติในหน้าแรก"
+        fields:
+          - {label: "ป้ายประกาศด้านบน", name: "badge", widget: "string"}
+          - {label: "หัวข้อหลัก", name: "title", widget: "string"}
+          - {label: "คำเน้นสี (Highlight)", name: "highlight", widget: "string"}
+          - {label: "คำอธิบายใต้หัวข้อ", name: "subtitle", widget: "string"}
+          - label: "ตัวเลขสถิติ 3 ช่อง"
+            name: "stats"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - {label: "ตัวเลข / ข้อความหลัก", name: "number", widget: "string"}
+              - {label: "คำอธิบาย (ป้ายกำกับ)", name: "label", widget: "string"}
+
       - label: "🧭 เมนูนำทาง (Navigation)"
         name: "menu"
         file: "data/menu.json"

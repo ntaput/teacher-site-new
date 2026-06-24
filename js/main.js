@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   await loadAllData();
   initNavigation();
+  initHome();
   
   // Page-specific init
   if (document.getElementById('subjects-content')) initSubjects();
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadAllData() {
   try {
-    const [teacher, subjects, materials, schedule, links, news, gallery, menu] = await Promise.all([
+    const [teacher, subjects, materials, schedule, links, news, gallery, menu, home] = await Promise.all([
       fetch('data/teacher.json').then(r => r.json()),
       fetch('data/subjects.json').then(r => r.json()),
       fetch('data/materials.json').then(r => r.json()),
@@ -35,7 +36,8 @@ async function loadAllData() {
       fetch('data/links.json').then(r => r.json()),
       fetch('data/news.json').then(r => r.json()),
       fetch('data/gallery.json').then(r => r.json()),
-      fetch('data/menu.json').then(r => r.json())
+      fetch('data/menu.json').then(r => r.json()),
+      fetch('data/home.json').then(r => r.json())
     ]);
     
     SITE_DATA = {
@@ -46,10 +48,34 @@ async function loadAllData() {
       links: links ? links.categories : [],
       news: news ? news.items : [],
       gallery: gallery ? gallery.items : [],
-      menu: menu ? menu.items : []
+      menu: menu ? menu.items : [],
+      home: home || {}
     };
   } catch (err) {
     console.error("Error loading data from JSON:", err);
+  }
+}
+
+// ============ Home Page ============
+function initHome() {
+  if (!SITE_DATA.home) return;
+  
+  const homeBadge = document.getElementById('home-badge');
+  const homeTitle = document.getElementById('home-title');
+  const homeHighlight = document.getElementById('home-highlight');
+  const homeSubtitle = document.getElementById('home-subtitle');
+  
+  if (homeBadge && SITE_DATA.home.badge) homeBadge.textContent = SITE_DATA.home.badge;
+  if (homeTitle && SITE_DATA.home.title) homeTitle.innerHTML = SITE_DATA.home.title + (SITE_DATA.home.highlight ? `<span class="highlight" id="home-highlight">${SITE_DATA.home.highlight}</span>` : '');
+  if (homeSubtitle && SITE_DATA.home.subtitle) homeSubtitle.textContent = SITE_DATA.home.subtitle;
+  
+  if (SITE_DATA.home.stats && SITE_DATA.home.stats.length === 3) {
+    for (let i = 0; i < 3; i++) {
+      const numEl = document.getElementById(`home-stat${i+1}-num`);
+      const labelEl = document.getElementById(`home-stat${i+1}-label`);
+      if (numEl) numEl.textContent = SITE_DATA.home.stats[i].number;
+      if (labelEl) labelEl.textContent = SITE_DATA.home.stats[i].label;
+    }
   }
 }
 
