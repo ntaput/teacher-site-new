@@ -29,17 +29,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadAllData() {
   try {
+    const v = Date.now();
     const [site, teacher, subjects, materials, schedule, links, news, gallery, menu, home] = await Promise.all([
-      fetch('data/site.json').then(r => r.json()),
-      fetch('data/teacher.json').then(r => r.json()),
-      fetch('data/subjects.json').then(r => r.json()),
-      fetch('data/materials.json').then(r => r.json()),
-      fetch('data/schedule.json').then(r => r.json()),
-      fetch('data/links.json').then(r => r.json()),
-      fetch('data/news.json').then(r => r.json()),
-      fetch('data/gallery.json').then(r => r.json()),
-      fetch('data/menu.json').then(r => r.json()),
-      fetch('data/home.json').then(r => r.json())
+      fetch(`data/site.json?v=${v}`).then(r => r.json()),
+      fetch(`data/teacher.json?v=${v}`).then(r => r.json()),
+      fetch(`data/subjects.json?v=${v}`).then(r => r.json()),
+      fetch(`data/materials.json?v=${v}`).then(r => r.json()),
+      fetch(`data/schedule.json?v=${v}`).then(r => r.json()),
+      fetch(`data/links.json?v=${v}`).then(r => r.json()),
+      fetch(`data/news.json?v=${v}`).then(r => r.json()),
+      fetch(`data/gallery.json?v=${v}`).then(r => r.json()),
+      fetch(`data/menu.json?v=${v}`).then(r => r.json()),
+      fetch(`data/home.json?v=${v}`).then(r => r.json())
     ]);
     
     SITE_DATA = {
